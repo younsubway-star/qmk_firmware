@@ -26,8 +26,8 @@ jobs:
 
     - name: Compile Firmware
       run: |
-        # 경로를 ansi_encoder로 수정했습니다
-        qmk compile -kb keychron/q0_max/ansi_encoder -km via
+        # 다시 올바른 경로(encoder)로 수정했습니다
+        qmk compile -kb keychron/q0_max/encoder -km via
 
     - name: Upload Firmware
       uses: actions/upload-artifact@v4
