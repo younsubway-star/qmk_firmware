@@ -8,7 +8,7 @@ jobs:
     container: qmkfm/qmk_cli
     steps:
     - name: Checkout QMK
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         submodules: recursive
 
@@ -26,13 +26,10 @@ jobs:
 
     - name: Compile Firmware
       run: |
-        # 중요: 아래 줄이 실제 컴파일 명령입니다.
-        # -kb: 키보드 경로 (keychron/q0_max/encoder)
-        # -km: 키맵 이름 (via)
         qmk compile -kb keychron/q0_max/encoder -km via
 
     - name: Upload Firmware
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: keychron_q0_max_firmware
         path: |
