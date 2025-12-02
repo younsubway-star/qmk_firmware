@@ -55,11 +55,8 @@
 #    define BOOTMAGIC_LITE_ROW 0
 #    define BOOTMAGIC_LITE_COLUMN 1
 
-// 기존 설정을 지우고 40개로 강제 설정 (충돌 방지)
+// 용량 설정은 제거하고, 매크로 개수만 40개로 늘립니다 (안전 모드)
 #undef DYNAMIC_KEYMAP_MACRO_COUNT
 #define DYNAMIC_KEYMAP_MACRO_COUNT 40
-
-#undef WEAR_LEVELING_LOGICAL_SIZE
-#define WEAR_LEVELING_LOGICAL_SIZE 4096
 
 #endif
