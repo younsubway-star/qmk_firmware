@@ -35,7 +35,7 @@
 
 /* Set LED driver current */
 #    define SNLED27351_CURRENT_TUNE \
-	{ 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A }
+    { 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A, 0x9A }
 
 /* Allow shutdown of led driver to save power */
 #    define RGB_MATRIX_DRIVER_SHUTDOWN_ENABLE
@@ -46,7 +46,7 @@
 #    define RGB_MATRIX_BRIGHTNESS_TURN_OFF_VAL 32
 
 /* Indications */
-#    define NUM_LOCK_INDEX	5
+#    define NUM_LOCK_INDEX    5
 #    define LOW_BAT_IND_INDEX { 24 }
 
 #    define RGB_MATRIX_KEYPRESSES
@@ -55,6 +55,11 @@
 #    define BOOTMAGIC_LITE_ROW 0
 #    define BOOTMAGIC_LITE_COLUMN 1
 
-#define DYNAMIC_KEYMAP_MACRO_COUNT 50
+// 기존 설정을 지우고 40개로 강제 설정 (충돌 방지)
+#undef DYNAMIC_KEYMAP_MACRO_COUNT
+#define DYNAMIC_KEYMAP_MACRO_COUNT 40
+
+#undef WEAR_LEVELING_LOGICAL_SIZE
 #define WEAR_LEVELING_LOGICAL_SIZE 4096
+
 #endif
